@@ -1,0 +1,131 @@
+:root {
+  --bg: #f4f9f9;
+  --text: #222;
+  --header: #2ecc71;
+  --nav: #27ae60;
+  --btn: #27ae60;
+  --btn-hover: #1f8b4c;
+  --card-bg: white;
+}
+
+body.dark {
+  --bg: #121212;
+  --text: #eee;
+  --header: #1abc9c;
+  --nav: #16a085;
+  --btn: #16a085;
+  --btn-hover: #138d75;
+  --card-bg: #1e1e1e;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+header {
+  background: var(--header);
+  color: white;
+  padding: 25px;
+  text-align: center;
+}
+
+nav {
+  background: var(--nav);
+  padding: 12px;
+  text-align: center;
+}
+
+nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.hero {
+  padding: 50px 20px;
+  text-align: center;
+  background: var(--card-bg);
+  border-radius: 8px;
+  margin: 20px;
+}
+
+.hero h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 16px;
+  color: var(--text);
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: var(--btn);
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.btn:hover {
+  background: var(--btn-hover);
+  transform: scale(1.05);
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.card {
+  background: var(--card-bg);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.card h3 {
+  color: var(--btn);
+}
+
+footer {
+  background: var(--header);
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 30px;
+}
+
+.dark-toggle {
+  position: fixed;
+  top: 10px;
+  right: 20px;
+  padding: 6px 12px;
+  background: var(--btn);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 1000;
+}
