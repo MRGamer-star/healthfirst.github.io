@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mental Health</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<button class="dark-toggle">🌙 Dark Mode</button>
+
+<header>
+  <h1>Mental Health</h1>
+</header>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="nutrition.html">Nutrition</a>
+  <a href="fitness.html">Fitness</a>
+  <a href="mental.html">Mental Health</a>
+  <a href="contact.html">Contact Us</a>
+</nav>
+
+<section class="container">
+  <h2>Mind Care</h2>
+  <p>Practice meditation, reduce stress, sleep well, and stay positive.</p>
+</section>
+
+<section class="container">
+  <div class="cards">
+    <div class="card">
+      <h3>Talk it out 🗣️</h3>
+      <p>Keeping everything inside builds pressure. Sharing your thoughts with someone you trust helps your mind process stress.</p>
+    </div>
+    <div class="card">
+      <h3>Sleep resets the brain 😴</h3>
+      <p>7–9 hours of sleep improves mood, focus, and emotional control more than any quick fix.</p>
+    </div>
+    <div class="card">
+      <h3>Take breaks 🧠</h3>
+      <p>Constant work burns you out. Short breaks during the day actually increase productivity and reduce anxiety.</p>
+    </div>
+    <div class="card">
+      <h3>Limit negative input 📵</h3>
+      <p>Too much bad news and social media comparison drains mental energy — control what you consume mentally just like food.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Health First</p>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const toggleBtn = document.querySelector('.dark-toggle');
+  if(localStorage.getItem('darkMode')==='true'){
+    document.body.classList.add('dark');
+    toggleBtn.textContent='☀️ Light Mode';
+  }
+  toggleBtn.addEventListener('click', function(){
+    document.body.classList.toggle('dark');
+    if(document.body.classList.contains('dark')){
+      localStorage.setItem('darkMode','true');
+      toggleBtn.textContent='☀️ Light Mode';
+    }else{
+      localStorage.setItem('darkMode','false');
+      toggleBtn.textContent='🌙 Dark Mode';
+    }
+  });
+});
+</script>
+
+</body>
+</html>
